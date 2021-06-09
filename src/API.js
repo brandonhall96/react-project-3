@@ -30,7 +30,7 @@ const select = (e, index) => {
   };
 
 
-
+console.log('hello')
 
 
 
@@ -43,6 +43,7 @@ const select = (e, index) => {
     return (
         <div>
           <Router>
+              <StarLink />
 
             </Router>
         
