@@ -6,17 +6,18 @@ import setAuthToken from './utils/setAuthToken';
 // CSS
 import './App.css';
 // Components
-import Welcome from './components/Welcome';
+import Welcome from './pages/Welcome';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Profile from './components/Profile';
-import Signup from './components/Signup';
-import Login from './components/Login';
-import About from './components/About';
-import StarLink from './components/StarLink';
-import Rockets from './components/Rockets';
-import Tracker from './components/Tracker';
+import Profile from './pages/Profile';
+import Signup from './pages/Signup';
+import Login from './pages/Login';
+import About from './pages/About';
+import StarLink from './pages/StarLink';
+import Rockets from './pages/Rockets';
+import Tracker from './pages/Tracker';
 import Favorites from './components/Favorites';
+import API from './API';
 
 //private route component
 const PrivateRoute = ({ component: Component, ...rest}) => {
@@ -77,9 +78,9 @@ function App() {
       <div className='container mt-5'>
         <Switch>
             {/* routes will go inside of here */}
-            <Route path='/signup' component={ Signup } />
+            <Route path='/signup' pages={ Signup } />
             <Route path='/login' render={(props) => <Login {...props} user={currentUser} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} /> } />
-            <Route path='/about' component={About} />
+            <Route path='/about' pages={About} />
             <Route exact path='/' component={Welcome} />
             <PrivateRoute path = '/profile' component={Profile} user={currentUser} handleLogout={handleLogout} />
             <Route path='/tracker' component={Tracker} />

@@ -1,20 +1,14 @@
 import axios from 'axios';
 import React from 'react';
+import API from '../API';
 
 
 
 
 
 
-const StarLink = () => {
-
-    useEffect(() =>{
-        let url = 'https://api.spacexdata.com/v4/starlink'
-        
-        
-
-    })
-
+const StarLink = (props) => {
+  
 
 
 
