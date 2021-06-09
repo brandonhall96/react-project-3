@@ -30,9 +30,6 @@ const select = (e, index) => {
   };
 
 
-console.log('hello')
-
-
 
 
 
