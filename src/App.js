@@ -16,7 +16,7 @@ import About from './components/About';
 import StarLink from './components/StarLink';
 import Rockets from './components/Rockets';
 import Tracker from './components/Tracker';
-import Ships from './components/Ships';
+import Favorites from './components/Favorites';
 
 //private route component
 const PrivateRoute = ({ component: Component, ...rest}) => {
@@ -82,7 +82,8 @@ function App() {
             <Route path='/about' component={About} />
             <Route exact path='/' component={Welcome} />
             <PrivateRoute path = '/profile' component={Profile} user={currentUser} handleLogout={handleLogout} />
-            
+            <Route path='/tracker' component={Tracker} />
+            <Route path='/starlink' component={StarLink} />
         </Switch>
       </div>
       <Footer />

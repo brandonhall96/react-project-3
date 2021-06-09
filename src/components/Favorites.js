@@ -1,7 +1,7 @@
 
 
 
-const Ships = (props) => {
+const Favorites = (props) => {
     return(
         <div>
             
@@ -11,4 +11,4 @@ const Ships = (props) => {
 
 }
 
-export default Ships;
+export default Favorites;

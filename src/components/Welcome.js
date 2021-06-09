@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink, Link } from 'react-router-dom';
 
 const Welcome = () => {
 
@@ -9,21 +10,19 @@ const Welcome = () => {
     return (
         <div>
             <h1>This is our Dashboard</h1>
-            <div>
-                <a href="http://">Rockets</a>
+            <div className="container">
+                <button className="nav-item">
+                    <NavLink className="nav-link" exact to="/tracker">Live Tracker</NavLink>
+                </button>
+                <button className="nav-item">
+                    <NavLink className="nav-link" exact to="/starlink">StarLink</NavLink>
+                </button>
+                <button className="nav-item">
+                    <NavLink className="nav-link" exact to="/rockets">Rockets</NavLink>
+                </button>
             </div>
-            <div>
-                <a href="http://">Tracker</a>
-            </div>
-            <div>
-                <a href="http://">Ships</a>
-            </div>
-            <div>
-                <a href="http://">StarLink</a>
-            </div>
-            <div>
-                <a href="http://"></a>
-            </div>
+                        
+        
         </div>
     )
 }
