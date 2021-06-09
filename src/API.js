@@ -40,7 +40,7 @@ const select = (e, index) => {
     return (
         <div>
           <Router>
-              <StarLink />
+              {/* <StarLink /> */}
 
             </Router>
         

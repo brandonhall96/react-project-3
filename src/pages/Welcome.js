@@ -15,7 +15,7 @@ const Welcome = () => {
                     <NavLink className="nav-link" exact to="/tracker">Live Tracker</NavLink>
                 </button>
                 <button className="nav-item">
-                    <NavLink className="nav-link" exact to="/starlink">StarLink</NavLink>
+                    <NavLink className="nav-link" exact to="/starlink">Starlink</NavLink>
                 </button>
                 <button className="nav-item">
                     <NavLink className="nav-link" exact to="/rockets">Rockets</NavLink>
