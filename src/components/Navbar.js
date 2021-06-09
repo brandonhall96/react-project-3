@@ -17,6 +17,15 @@ const Navbar = (props) => {
                         <li className="nav-item">
                             <NavLink className="nav-link"  to="/about">About</NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link"  to="/about">Tracker</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link"  to="/about">StarLink</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link"  to="/about">Rockets</NavLink>
+                        </li>
                     </ul>
                     {
                         props.isAuth 

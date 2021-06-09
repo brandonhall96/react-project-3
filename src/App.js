@@ -13,6 +13,10 @@ import Profile from './components/Profile';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import About from './components/About';
+import StarLink from './components/StarLink';
+import Rockets from './components/Rockets';
+import Tracker from './components/Tracker';
+import Ships from './components/Ships';
 
 //private route component
 const PrivateRoute = ({ component: Component, ...rest}) => {
@@ -65,6 +69,8 @@ function App() {
       }
   }
 
+
+
   return (
     <div className="App">
       <Navbar isAuth={isAuthenticated} handleLogout={handleLogout}  />
@@ -76,7 +82,7 @@ function App() {
             <Route path='/about' component={About} />
             <Route exact path='/' component={Welcome} />
             <PrivateRoute path = '/profile' component={Profile} user={currentUser} handleLogout={handleLogout} />
-          
+            
         </Switch>
       </div>
       <Footer />
