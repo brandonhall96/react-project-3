@@ -8,7 +8,7 @@ import './App.css';
 // Components
 import Welcome from './pages/Welcome';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
@@ -111,7 +111,7 @@ function App() {
 
         </Switch>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
   
