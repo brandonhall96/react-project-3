@@ -53,7 +53,7 @@ const Signup = (props) => {
             
         }
         else {
-            alert('Password must be atleast 8 characters or more, try again..')
+            alert('Password must be at least 8 characters or more, try again..')
         }
 
     }
