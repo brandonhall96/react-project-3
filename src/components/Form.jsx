@@ -5,34 +5,13 @@ import { useState } from "react";
 import axios from 'axios';
 const CONNECTION_URI = process.env.DB_URI || "http://localhost:8000";
 
-
-
-
 const Form = (props) => {
-    //initial state of astronaut application
-    //add useState based on schema
-    //add functions to handle each one of them
-    //const payload adding all the details
-    //add axios.post
     const [name, setName] = useState('');
     const [age, setAge] = useState('');
     const [favAstronaut, setFavAstronaut] = useState('');
     const [favSpaceMovie, setFavSpaceMovie] = useState('');
     const [question, setQuestion] = useState('');
     
-/*
-// const initialState =
-// {
-//     name: "",
-//     age: "",
-//     favAstronaut: "",
-//     faveSpaceMovie: "",
-//     question: ""
-// }
-// // console.log(props)
-// const [state, setState] = useState(initialState)
-// console.log(initialState)
-*/
 //============function to take in value====================//
 const handleName = (e) => {
 setName(e.target.value)
@@ -78,7 +57,7 @@ const handleSubmit = async (e) => {
                 <div className="card card-body">
                     <h2 className="py-2">CREATE YOUR OWN ASTRONAUT</h2>
                     <form onSubmit={handleSubmit}>
-
+-b 
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
                             <input type='text' name='name' value={name} onChange={handleName} className='form-control' />
