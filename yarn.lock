@@ -3184,6 +3184,11 @@
   "resolved" "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz"
   "version" "0.12.0"
 
+"cesium@^1.82.1", "cesium@1.x":
+  "integrity" "sha512-BpyQ3KF6ZPPicW5L3khPJA0fKWL1ViA5cV1hFa/8zWiJ/1ix3+kyzrvaAlUdy/knn9xY70ePnNYwokIs+d2znw=="
+  "resolved" "https://registry.npmjs.org/cesium/-/cesium-1.82.1.tgz"
+  "version" "1.82.1"
+
 "chalk@^2.0.0":
   "integrity" "sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ=="
   "resolved" "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz"
@@ -9399,7 +9404,7 @@
     "strip-ansi" "6.0.0"
     "text-table" "0.2.0"
 
-"react-dom@*", "react-dom@^17.0.1", "react-dom@>=16.13", "react-dom@>=17.0":
+"react-dom@*", "react-dom@^17.0.1", "react-dom@>=16.13", "react-dom@>=16.8", "react-dom@>=17.0":
   "integrity" "sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug=="
   "resolved" "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.1.tgz"
   "version" "17.0.1"
@@ -9849,6 +9854,11 @@
   "integrity" "sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8="
   "resolved" "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz"
   "version" "1.0.0"
+
+"resium@^1.13.1":
+  "integrity" "sha512-lcpiEvCmA/U64CZ0ybcJpBkFlOXylJBWmweDBPQRIjrUn3lH66ypJuJVJuwPeC0DBfbEuEBJB1tflXkLR+eYoQ=="
+  "resolved" "https://registry.npmjs.org/resium/-/resium-1.13.1.tgz"
+  "version" "1.13.1"
 
 "resize-observer-polyfill@^1.5.1":
   "integrity" "sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg=="

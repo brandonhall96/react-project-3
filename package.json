@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.0",
     "cannon": "^0.6.2",
+    "cesium": "^1.82.1",
     "craco-cesium": "^1.2.0",
     "dotenv": "^8.2.0",
     "jwt-decode": "^3.1.2",
@@ -17,6 +18,7 @@
     "react-globe": "^5.0.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "resium": "^1.13.1",
     "three": "^0.110.0",
     "three-glow-mesh": "^0.1.2",
     "use-cannon": "^0.5.3",
@@ -26,7 +28,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start-craco": "craco start",
+    "build-craco": "craco build",
+    "test-craco": "craco test",
+    "eject-craco": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
