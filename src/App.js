@@ -17,9 +17,9 @@ import StarLink from './pages/StarLink';
 import Rockets from './pages/Rockets';
 import Tracker from './pages/Tracker';
 import Favorites from './components/Favorites';
-import API from './API'
 import axios from 'axios';
-import Sats from './components/Sats';
+import Form from './components/Form';
+
 
 //private route component
 const PrivateRoute = ({ component: Component, ...rest}) => {
@@ -107,8 +107,9 @@ function App() {
             <PrivateRoute path = '/profile' component={Profile} user={currentUser} handleLogout={handleLogout} />
             <Route path='/tracker' component={Tracker} />
             <Route path='/starlink' component={StarLink} />
-            <Route path='/sats' component={Sats}  /> 
             <Route path='/rockets' component={Rockets} />
+            <Route path='/form' component={Form}></Route>
+
         </Switch>
       </div>
       <Footer />
