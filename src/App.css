@@ -4,6 +4,8 @@ html {
 }
 body {
   margin-bottom: 60px; /* Margin bottom by footer height */
+  background-image: url(https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80);
+  background-size: cover;
 }
 .footer {
   position: absolute;
@@ -16,4 +18,33 @@ body {
 .bCards {
     width: 100px;
     color: green;
+}
+
+
+
+#welheader {
+    color: white;
+}
+
+#star {
+    color: white;
+}
+
+#aboutstar {
+    display: block;
+    justify-content: left;
+    max-width: 600px;
+    margin-left: 550px;
+    margin-top: -650px;
+    font-size: 25px;
+    
+
+}
+
+.sats {
+    
+}
+
+.about {
+    color: white;
 }

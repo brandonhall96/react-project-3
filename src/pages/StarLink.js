@@ -112,57 +112,70 @@ const StarLink = (props) => {
 
 
     return(
-        <div>
-            <h1>This is starlink</h1>
-            <div>
-                {name}
-                <br></br>
+        <div id="star">
+            <div className="sats">
+                <h1>{name}</h1>
+                
                 Longitude: {longitude}
                 <br></br>
                 Latitude: {latitude}
                 <br></br>
                 Launch Date: {launchDate}
+                <br></br>
+                <button>View in Maps</button>
             </div> 
             <br></br>
             <div>
-                {name2}
-                <br></br>
+                <h1>{name2}</h1>
+                
                 Longitude: {longitude2}
                 <br></br>
                 Latitude: {latitude2}
                 <br></br>
                 Launch Date: {launchDate2}
+                <br></br>
+                <button>View in Maps</button>
             </div> 
             <br></br>
             <div>
-                {name3}
-                <br></br>
+                <h1>{name3}</h1>
+                
                 Longitude: {longitude3}
                 <br></br>
                 Latitude: {latitude3}
                 <br></br>
                 Launch Date: {launchDate3}
+                <br></br>
+                <button>View in Maps</button>
             </div> 
             <br></br>
             <div>
-                {name4}
-                <br></br>
+                <h1>{name4}</h1>
                 Longitude: {longitude4}
                 <br></br>
                 Latitude: {latitude4}
                 <br></br>
                 Launch Date: {launchDate4}
+                <br></br>
+                <button>View in Maps</button>
             </div> 
                 <br></br>
             <div>
-                {name5}
-                <br></br>
+                <h1>{name5}</h1>
                 Longitude: {longitude5}
                 <br></br>
                 Latitude: {latitude5}
                 <br></br>
                 Launch Date: {launchDate5}
+                <br></br>
+                <button>View in Maps</button>
             </div> 
+
+            <div id="aboutstar">
+            Starlink is a satellite internet constellation being constructed by FakeX providing satellite Internet access. 
+            The constellation will consist of thousands of mass-produced 
+            small satellites in low Earth orbit, which communicate with designated ground transceivers.
+            </div>
                 
                 
        

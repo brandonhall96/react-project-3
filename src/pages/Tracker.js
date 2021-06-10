@@ -1,19 +1,23 @@
-import React from 'react';
+// import React from 'react';
+// import { Viewer } from 'resium';
 
-const Tracker = () => {
-    
+// const Tracker = () =>  {
+
+//     <Viewer full>
+//         <Entity position={position} point={pointGraphics} />
+//     </Viewer>
 
 
 
 
 
 
-    return(
-        <div>
-            <h1>This is our tracker</h1>
+//     return(
+//         <div>
+//             <h1>This is our tracker</h1>
 
-        </div>
-    )
-}
+//         </div>
+//     )
+// }
 
-export default Tracker;
+// export default Tracker;
