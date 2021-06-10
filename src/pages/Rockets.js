@@ -34,7 +34,7 @@ const Rockets = (props) => {
 
     return(
         <div>
-            <h1>{rocketList}</h1>
+            {/* <h1>{rocketList}</h1> */}
         </div>
     )
 }
