@@ -99,8 +99,7 @@ function App() {
       <Navbar isAuth={isAuthenticated} handleLogout={handleLogout}  />
       <div className='container mt-5'>
         <Switch>
-            {/* routes will go inside of here */}
-            <Route path='/signup' pages={ Signup } />
+            <Route path='/signup' component={ Signup } />
             <Route path='/login' render={(props) => <Login {...props} user={currentUser} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} /> } />
             <Route path='/about' component={About} />
             <Route exact path='/' component={Welcome} />
