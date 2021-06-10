@@ -9,13 +9,12 @@ function Tracker() {
     return(
         <Viewer className='globe'>
             <Entity
-                name="tokyo"
-                description="test"
-                position={Cartesian3.fromDegrees(139.767052, 35.681167, 100)}
+                name="FakeX HQ"
+                description="FakeX HQ"
+                position={Cartesian3.fromDegrees(-118.35247, 33.92309)}
                 point={{
-                    pixelSize: 10,
-                   
-
+                    pixelSize: 20,
+           
                 }}
             />
         </Viewer>
