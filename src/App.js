@@ -1,6 +1,6 @@
 // Imports
 import React, { useEffect, useState } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
 // CSS
@@ -17,7 +17,9 @@ import StarLink from './pages/StarLink';
 import Rockets from './pages/Rockets';
 import Tracker from './pages/Tracker';
 import Favorites from './components/Favorites';
-import API from './API';
+import API from './API'
+import axios from 'axios';
+import Sats from './components/Sats';
 
 //private route component
 const PrivateRoute = ({ component: Component, ...rest}) => {
@@ -71,6 +73,26 @@ function App() {
   }
 
 
+//   const [sats, setSats] = useState([]);
+//   const [selectedSat, setSelectedSat] = useState({})
+
+//   useEffect(() => {
+//       async function fetchSatData() {
+//           const request = await axios.get('https://api.spacexdata.com/v4/starlink')
+//           const results = await request.data
+//         //   console.log(results)
+//           setSats(results)
+          
+//       }
+//       fetchSatData();
+//   }, [])
+
+//   const select = (e, idx) => {
+//       setSelectedSat([])
+//       setSelectedSat({ name: e.target.OBJECT_NAME, model: e.target.OBJECT_ID})
+   
+//   }
+
 
   return (
     <div className="App">
@@ -81,15 +103,23 @@ function App() {
             <Route path='/signup' pages={ Signup } />
             <Route path='/login' render={(props) => <Login {...props} user={currentUser} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} /> } />
             <Route path='/about' pages={About} />
+
             <Route exact path='/' component={Welcome} />
+                
+
             <PrivateRoute path = '/profile' component={Profile} user={currentUser} handleLogout={handleLogout} />
             <Route path='/tracker' component={Tracker} />
+            
             <Route path='/starlink' component={StarLink} />
+        
+
+            <Route path='/sats' component={Sats}  /> 
         </Switch>
       </div>
       <Footer />
     </div>
   );
+  
 }
 
 export default App;

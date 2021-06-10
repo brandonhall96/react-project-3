@@ -1,51 +1,38 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import axios from 'axios';
+// import React, { useState, useEffect } from 'react';
+// import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+// import axios from 'axios';
+// import StarLink from './pages/StarLink'
 
-const API = () => {
-
-    const [starlink, setStarlink] = useState([])
-    const [selectedStarlink, setSelectedStarlink] = useState([])
-    const [isLoaded, setIsLoaded] = useState(false); 
-
-useEffect(async() => {
-    let allStarlinks = []
+// function API() {
+//     const [slinkData, setSlinkData] = useState([]);
     
-        let url = 'https://api.spacexdata.com/v4/rockets'
-        await axios.get(url)
-        .then (res => {
-            let starlink = res.data.results
-            allStarlinks.push(...starlink)
-           setStarlink(allStarlinks)
+//     async function fetchSlink() {
+//         const request = await axios.get('https://api.spacexdata.com/v4/starlink')
+//         const result = await request.data
+//         setSlinkData(result)
+//     }
 
-        })
-    
-    setIsLoaded(true);
-}, [])
-
-const select = (e, index) => {
-    console.log('clicked', e.target);
-    setSelectedStarlink([])
-  setSelectedStarlink({ name: e.target.TLE_LINE0, longitude: e.target.longitude, latitude: e.target.latitude });
-  };
+//     useEffect(() => {
+//         fetchSlink();
+//     }, [])
 
 
 
 
 
 
+//     return(
+//         <div>
+//             <Router>
+//             <Route path = '/explore'>
+//                 <StarLink slinkData={slinkData}  />
+//             </Route>
+//             </Router>
+
+//         </div>
+
+//     )
+// }
 
 
-
-    return (
-        <div>
-          <Router>
-              <StarLink />
-
-            </Router>
-        
-        </div>
-    )
-}
-
-export default API;
+// export default API;
