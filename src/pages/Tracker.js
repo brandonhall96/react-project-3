@@ -1,23 +1,25 @@
-// import React from 'react';
-// import { Viewer } from 'resium';
-
-// const Tracker = () =>  {
-
-//     <Viewer full>
-//         <Entity position={position} point={pointGraphics} />
-//     </Viewer>
+import { Viewer, Entity } from 'resium';
+import React, { useState } from "react";
+import { Cartesian3 } from 'cesium'
+import '../App.css'
 
 
+function Tracker() {
 
+    return(
+        <Viewer className='globe'>
+            <Entity
+                name="tokyo"
+                description="test"
+                position={Cartesian3.fromDegrees(139.767052, 35.681167, 100)}
+                point={{
+                    pixelSize: 10,
+                   
 
+                }}
+            />
+        </Viewer>
+    )
+}
 
-
-//     return(
-//         <div>
-//             <h1>This is our tracker</h1>
-
-//         </div>
-//     )
-// }
-
-// export default Tracker;
+  export default Tracker;
