@@ -25,6 +25,7 @@ const Login = (props) => {
         axios.post(`${REACT_APP_SERVER_URL}/api/users/login`, userData)
         .then(response => {
             const { token } = response.data;
+            console.log(response)
             // Save token to localStorage
             localStorage.setItem('jwtToken', token);
             // Set token to auth header
