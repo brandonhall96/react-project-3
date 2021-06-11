@@ -3,6 +3,7 @@ import React , {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom';
 import App from '../App.css'
 import Tracker from './Tracker';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 
 
@@ -98,27 +99,15 @@ const StarLink = (props) => {
 
 
 
-// const satList = props.sats.map((sat,idx) => {
-//     return <div className="starlinks"><Link to={{pathname: '/sats'}} className="button btn btn-secondary"
-//     onClick={(e) => props.select(e, idx)}
-//     name={sat.name} 
-//     id={sat.model}
-//     key={idx}><p className='bCards'>{sat.name}</p></Link></div>
-
-// })
-
-
-
-
 
     return(
         <div id="star">
             <div className="sats">
                 <h1>{name}</h1>
                 
-                Longitude: {longitude}
-                <br></br>
                 Latitude: {latitude}
+                <br></br>
+                Longitude: {longitude}
                 <br></br>
                 Launch Date: {launchDate}
                 <br></br>
@@ -128,9 +117,9 @@ const StarLink = (props) => {
             <div>
                 <h1>{name2}</h1>
                 
-                Longitude: {longitude2}
-                <br></br>
                 Latitude: {latitude2}
+                <br></br>
+                Longitude: {longitude2}
                 <br></br>
                 Launch Date: {launchDate2}
                 <br></br>
@@ -140,9 +129,9 @@ const StarLink = (props) => {
             <div>
                 <h1>{name3}</h1>
                 
-                Longitude: {longitude3}
-                <br></br>
                 Latitude: {latitude3}
+                <br></br>
+                Longitude: {longitude3}
                 <br></br>
                 Launch Date: {launchDate3}
                 <br></br>
@@ -151,9 +140,9 @@ const StarLink = (props) => {
             <br></br>
             <div>
                 <h1>{name4}</h1>
-                Longitude: {longitude4}
-                <br></br>
                 Latitude: {latitude4}
+                <br></br>
+                Longitude: {longitude4}
                 <br></br>
                 Launch Date: {launchDate4}
                 <br></br>
@@ -162,22 +151,24 @@ const StarLink = (props) => {
                 <br></br>
             <div>
                 <h1>{name5}</h1>
-                Longitude: {longitude5}
-                <br></br>
                 Latitude: {latitude5}
+                <br></br>
+                Longitude: {longitude5}
                 <br></br>
                 Launch Date: {launchDate5}
                 <br></br>
                 <button>View in Maps</button>
             </div> 
 
-            <Tracker />
+            {/* <Tracker /> */}
 
             <div id="aboutstar">
             Starlink is a satellite internet constellation being constructed by FakeX providing satellite Internet access. 
             The constellation will consist of thousands of mass-produced 
             small satellites in low Earth orbit, which communicate with designated ground transceivers.
             </div>
+
+            
                 
                 
        
