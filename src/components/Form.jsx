@@ -57,7 +57,6 @@ const handleSubmit = async (e) => {
                 <div className="card card-body">
                     <h2 className="py-2">CREATE YOUR OWN ASTRONAUT</h2>
                     <form onSubmit={handleSubmit}>
--b 
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
                             <input type='text' name='name' value={name} onChange={handleName} className='form-control' />

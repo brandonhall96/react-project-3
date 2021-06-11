@@ -19,8 +19,6 @@ const [astronauts, setAstronauts] = useState('')
 
     },[])
 
-
-
     return (
 
         <div className="row mt-4">
