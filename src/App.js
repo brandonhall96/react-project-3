@@ -20,6 +20,7 @@ import Favorites from './components/Favorites';
 import axios from 'axios';
 import Form from './components/Form';
 import Astronaut from './pages/Astronaut';
+import Edit from './pages/Edit';
 
 
 
@@ -112,6 +113,7 @@ function App() {
             <Route path='/rockets' component={Rockets} />
             <PrivateRoute path='/form' component={Form} user={currentUser} />
             <Route path='/astronauts' component={Astronaut} />
+            <Route path='/edit' component={Edit} />
 
         </Switch>
       </div>
