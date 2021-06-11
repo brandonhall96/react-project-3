@@ -3,6 +3,7 @@ import React , {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom';
 import App from '../App.css'
 import Tracker from './Tracker';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 
 
@@ -97,15 +98,15 @@ const StarLink = (props) => {
 
 
 
+ function handleSat1() {
+     console.log('clicked happened')
+ }
 
-// const satList = props.sats.map((sat,idx) => {
-//     return <div className="starlinks"><Link to={{pathname: '/sats'}} className="button btn btn-secondary"
-//     onClick={(e) => props.select(e, idx)}
-//     name={sat.name} 
-//     id={sat.model}
-//     key={idx}><p className='bCards'>{sat.name}</p></Link></div>
 
-// })
+
+
+
+
 
 
 
@@ -122,7 +123,7 @@ const StarLink = (props) => {
                 <br></br>
                 Launch Date: {launchDate}
                 <br></br>
-                <button>View in Maps</button>
+                <button onClick={handleSat1}>View in Maps</button>
             </div> 
             <br></br>
             <div>
@@ -171,13 +172,15 @@ const StarLink = (props) => {
                 <button>View in Maps</button>
             </div> 
 
-            <Tracker />
+            {/* <Tracker /> */}
 
             <div id="aboutstar">
             Starlink is a satellite internet constellation being constructed by FakeX providing satellite Internet access. 
             The constellation will consist of thousands of mass-produced 
             small satellites in low Earth orbit, which communicate with designated ground transceivers.
             </div>
+
+            
                 
                 
        
