@@ -6,7 +6,7 @@ import App from '../App.css'
 
 const Rockets = (props) => {
     
-    const CONNECTION_URI = process.env.DB_URI || "http://localhost:8000";
+    const CONNECTION_URI = process.env.DB_URI || "http://localhost:8080";
 
     const [rocketData, setRocketData] = useState([]);
 
