@@ -1,8 +1,9 @@
 
 //=========================ASTRONAUT APPLICATION===================================//
 import setAuthToken from '../utils/setAuthToken'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 const CONNECTION_URI = process.env.DB_URI || "http://localhost:8000";
 
 const Form = (props) => {
@@ -11,7 +12,13 @@ const Form = (props) => {
     const [favAstronaut, setFavAstronaut] = useState('');
     const [favSpaceMovie, setFavSpaceMovie] = useState('');
     const [question, setQuestion] = useState('');
-    
+    const [hasPosted, setHasPosted] = useState(false)
+    //1. another useState that will track a boolean value that will check if user has posted form data
+
+    //3. create useEffect that tracks if there has been any change to has posted, and if has posted is true then redirect to Astronaut.js
+// useEffect(() => {
+//     setHasPosted(hasPosted)
+// },[])
 //============function to take in value====================//
 const handleName = (e) => {
 setName(e.target.value)
@@ -45,11 +52,18 @@ const handleSubmit = async (e) => {
     axios.post(url, payload)
     .then( res => {
         console.log(res.data);
+        //2. once we have successfully submit a post request, this is where we set has posted to true
+        // if (setHasPosted === true) return <Redirect to='/astronauts' />
+
+        props.history.push('/astronauts')
     })
     .catch(err => {
         console.log(err)
     })
 }
+
+
+
 
     return (
         <div className="row mt-4">
