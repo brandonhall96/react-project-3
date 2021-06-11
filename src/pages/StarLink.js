@@ -2,6 +2,7 @@ import axios from 'axios';
 import React , {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom';
 import App from '../App.css'
+import Tracker from './Tracker';
 
 
 
@@ -169,6 +170,8 @@ const StarLink = (props) => {
                 <br></br>
                 <button>View in Maps</button>
             </div> 
+
+            <Tracker />
 
             <div id="aboutstar">
             Starlink is a satellite internet constellation being constructed by FakeX providing satellite Internet access. 
