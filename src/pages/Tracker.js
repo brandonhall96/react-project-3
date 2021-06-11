@@ -11,8 +11,8 @@ function Tracker() {
         <Viewer full className='globe'>
             {/* <NavLink className="nav-link"  to="/rockets">Rockets</NavLink> */}
             <Entity
-                name="FakeX HQ"
-                description="FakeX HQ"
+                name="FakeX HeadQuarters"
+                description="FakeX"
                 position={Cartesian3.fromDegrees(-118.35247, 33.92309)}
                 point={{
                     pixelSize: 10,
