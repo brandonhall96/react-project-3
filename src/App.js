@@ -99,6 +99,7 @@ function App() {
       <Navbar isAuth={isAuthenticated} handleLogout={handleLogout}  />
       <div className='container mt-5'>
         <Switch>
+
             <Route path='/signup' component={ Signup } />
             <Route path='/login' render={(props) => <Login {...props} user={currentUser} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} /> } />
             <Route path='/about' component={About} />
@@ -107,7 +108,7 @@ function App() {
             <Route path='/tracker' component={Tracker} />
             <Route path='/starlink' component={StarLink} />
             <Route path='/rockets' component={Rockets} />
-            <Route path='/form' component={Form}></Route>
+            <PrivateRoute path='/form' component={Form} user={currentUser} />
 
         </Switch>
       </div>

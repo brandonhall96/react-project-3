@@ -21,7 +21,7 @@ const Navbar = (props) => {
                             <NavLink className="nav-link"  to="/tracker">Tracker</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link"  to="/starlink">StarLink</NavLink>
+                            <NavLink className="nav-link"  to="/starlink">Starlink</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link"  to="/rockets">Rockets</NavLink>
