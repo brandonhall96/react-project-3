@@ -98,18 +98,6 @@ const StarLink = (props) => {
 
 
 
- function handleSat1() {
-     console.log('clicked happened')
- }
-
-
-
-
-
-
-
-
-
 
 
     return(
@@ -117,21 +105,21 @@ const StarLink = (props) => {
             <div className="sats">
                 <h1>{name}</h1>
                 
-                Longitude: {longitude}
-                <br></br>
                 Latitude: {latitude}
+                <br></br>
+                Longitude: {longitude}
                 <br></br>
                 Launch Date: {launchDate}
                 <br></br>
-                <button onClick={handleSat1}>View in Maps</button>
+                <button>View in Maps</button>
             </div> 
             <br></br>
             <div>
                 <h1>{name2}</h1>
                 
-                Longitude: {longitude2}
-                <br></br>
                 Latitude: {latitude2}
+                <br></br>
+                Longitude: {longitude2}
                 <br></br>
                 Launch Date: {launchDate2}
                 <br></br>
@@ -141,9 +129,9 @@ const StarLink = (props) => {
             <div>
                 <h1>{name3}</h1>
                 
-                Longitude: {longitude3}
-                <br></br>
                 Latitude: {latitude3}
+                <br></br>
+                Longitude: {longitude3}
                 <br></br>
                 Launch Date: {launchDate3}
                 <br></br>
@@ -152,9 +140,9 @@ const StarLink = (props) => {
             <br></br>
             <div>
                 <h1>{name4}</h1>
-                Longitude: {longitude4}
-                <br></br>
                 Latitude: {latitude4}
+                <br></br>
+                Longitude: {longitude4}
                 <br></br>
                 Launch Date: {launchDate4}
                 <br></br>
@@ -163,9 +151,9 @@ const StarLink = (props) => {
                 <br></br>
             <div>
                 <h1>{name5}</h1>
-                Longitude: {longitude5}
-                <br></br>
                 Latitude: {latitude5}
+                <br></br>
+                Longitude: {longitude5}
                 <br></br>
                 Launch Date: {launchDate5}
                 <br></br>

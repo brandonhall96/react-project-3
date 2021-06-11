@@ -73,6 +73,18 @@ function App() {
   }
 
 
+//   useEffect(() => {
+//     let url = 'https://api.spacexdata.com/v4/starlink/'
+//     axios.get(url).then(res => {
+//         console.log(res.data)
+//         setName(res.data.spaceTrack.OBJECT_NAME)
+//         setLongitude(res.data.longitude)
+//         setLatitude(res.data.latitude)
+//         setLaunchDate(res.data.spaceTrack.LAUNCH_DATE)
+//     })
+// })
+
+
 //   const [sats, setSats] = useState([]);
 //   const [selectedSat, setSelectedSat] = useState({})
 
