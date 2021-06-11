@@ -19,6 +19,8 @@ import Tracker from './pages/Tracker';
 import Favorites from './components/Favorites';
 import axios from 'axios';
 import Form from './components/Form';
+import Astronaut from './pages/Astronaut';
+
 
 
 //private route component
@@ -109,6 +111,7 @@ function App() {
             <Route path='/starlink' component={StarLink} />
             <Route path='/rockets' component={Rockets} />
             <PrivateRoute path='/form' component={Form} user={currentUser} />
+            <Route path='/astronauts' component={Astronaut} />
 
         </Switch>
       </div>
