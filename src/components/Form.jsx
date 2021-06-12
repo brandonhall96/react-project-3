@@ -13,12 +13,7 @@ const Form = (props) => {
     const [favSpaceMovie, setFavSpaceMovie] = useState('');
     const [question, setQuestion] = useState('');
     const [hasPosted, setHasPosted] = useState(false)
-    //1. another useState that will track a boolean value that will check if user has posted form data
 
-    //3. create useEffect that tracks if there has been any change to has posted, and if has posted is true then redirect to Astronaut.js
-// useEffect(() => {
-//     setHasPosted(hasPosted)
-// },[])
 //============function to take in value====================//
 const handleName = (e) => {
 setName(e.target.value)
@@ -46,15 +41,11 @@ const handleSubmit = async (e) => {
     e.preventDefault();
     const payload = {name, age, favAstronaut, favSpaceMovie, question }
     let url = CONNECTION_URI+"/api/astros"
-    console.log(`Yo - database ${url} is working!!`)
-    // console.log(localStorage.getItem("jwtToken"))
+    console.log(`Yo - database ${url} is working!!`)   
     await setAuthToken(localStorage.getItem("jwtToken"))
     axios.post(url, payload)
     .then( res => {
         console.log(res.data);
-        //2. once we have successfully submit a post request, this is where we set has posted to true
-        // if (setHasPosted === true) return <Redirect to='/astronauts' />
-
         props.history.push('/astronauts')
     })
     .catch(err => {

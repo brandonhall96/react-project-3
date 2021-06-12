@@ -1,11 +1,12 @@
 // import setAuthToken from '../utils/setAuthToken'
 import Form from '../components/Form'
-
+import setAuthToken from '../utils/setAuthToken'    
 import { useState, useEffect } from "react";
 import axios from 'axios';
 import {Link} from 'react-router-dom'
 const CONNECTION_URI = process.env.DB_URI || "http://localhost:8080";
 
+    
 
 const Astronaut =  (props) =>{
 //
@@ -13,7 +14,7 @@ const [astronauts, setAstronauts] = useState([])
 
     useEffect(()=> {
         let url = CONNECTION_URI+"/api/astros"
-        // setAuthToken(localStorage.getItem("jwtToken"))
+        setAuthToken(localStorage.getItem("jwtToken"))
         axios.get(url)
         .then((res)=> {
             //setAstronauts and setting state in general is an asyncrynous action
