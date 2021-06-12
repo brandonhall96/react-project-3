@@ -1,11 +1,12 @@
 // import setAuthToken from '../utils/setAuthToken'
 import Form from '../components/Form'
-
+import setAuthToken from '../utils/setAuthToken'    
 import { useState, useEffect } from "react";
 import axios from 'axios';
 import {Link} from 'react-router-dom'
 const CONNECTION_URI = process.env.DB_URI || "http://localhost:8080";
 
+    
 
 const Astronaut =  (props) =>{
 //
@@ -13,7 +14,7 @@ const [astronauts, setAstronauts] = useState([])
 
     useEffect(()=> {
         let url = CONNECTION_URI+"/api/astros"
-        // setAuthToken(localStorage.getItem("jwtToken"))
+        setAuthToken(localStorage.getItem("jwtToken"))
         axios.get(url)
         .then((res)=> {
             //setAstronauts and setting state in general is an asyncrynous action
@@ -39,6 +40,7 @@ const [astronauts, setAstronauts] = useState([])
             <li>Favorite Astronaut: {astronaut.favAstronaut}</li>
             <li>Age: {astronaut.age}</li>
             <button onClick={()=> deleteAstro(astronaut._id)}>Delete this Astronaut</button>
+            <Link to={`/edit/${astronaut._id}`}>Edit {astronaut.name}</Link>
             {/* <li><strong>What qualifies you to be an ASTRONAUT?</strong> {astronaut.question}</li> */}
             <hr></hr>
             </div>
@@ -66,7 +68,6 @@ const [astronauts, setAstronauts] = useState([])
             <div className="col-md-7 offset-md-3">
                 <div className="card card-body">
                   {allAstronauts}
-                  {/* <Link to={`/edit/${props.bounty._id}`}>Edit {props.bounty.name}</Link><br/> */}
                   {/* <button onClick={deleteAstro}>Delete this Astronaut</button> */}
                 </div>
             </div>
