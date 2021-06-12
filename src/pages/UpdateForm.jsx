@@ -7,7 +7,6 @@ import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 const CONNECTION_URI = process.env.DB_URI || "http://localhost:8080";
 
-
 const UpdateForm = (props) => {
     const [name, setName] = useState('');
     const [age, setAge] = useState('');
@@ -37,9 +36,7 @@ const handleQuestion = (e) => {
     setQuestion(e.target.value)
 }
 
-
 //===========SUBMIT-FORM=====================//
-
 
 let history = useHistory();
 
@@ -61,9 +58,6 @@ const handleSubmit = async (e) => {
         console.log(err)
     })
 }
-
-
-
 
     return (
         <div className="row mt-4">
