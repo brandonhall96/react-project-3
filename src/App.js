@@ -21,6 +21,7 @@ import axios from 'axios';
 import Form from './components/Form';
 import Astronaut from './pages/Astronaut';
 import Edit from './pages/Edit';
+import UpdateForm from './pages/UpdateForm';
 
 
 
@@ -140,8 +141,8 @@ function App() {
             <Route path='/starlink' component={StarLink} />
             <Route path='/rockets'  component={Rockets} />
             <PrivateRoute path='/form' component={Form} user={currentUser} />
-            <Route path='/astronauts' component={Astronaut} />
-            <Route path='/edit' component={Edit} />
+            <PrivateRoute path='/astronauts' component={Astronaut} user={currentUser} />
+            <Route path='/edit/:id' component={Edit} />
 
         </Switch>
       </div>
