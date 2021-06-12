@@ -1,11 +1,12 @@
 import React from 'react'
-import Form from '../components/Form'
+import UpdateForm from './UpdateForm'
 
 function Edit(props) {
     console.log("EDIT Page:",props)
+    console.log(props.match.params.id)
     return (
       <>
-      <Form reload={props.reload} />
+      <UpdateForm reload={props.reload} id={props.match.params.id}/>
       </>
     )
 }

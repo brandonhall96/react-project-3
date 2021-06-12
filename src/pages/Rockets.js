@@ -8,7 +8,7 @@ const CONNECTION_URI = process.env.DB_URI || "http://localhost:8080";
 
 const Rockets = (props) => {
     
-    
+
     const [rocketData, setRocketData] = useState([]);
     
     
