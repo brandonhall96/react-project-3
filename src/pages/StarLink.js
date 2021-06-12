@@ -108,6 +108,8 @@ const StarLink = (props) => {
      
 //  })
 
+ 
+
 
 
 
@@ -123,7 +125,7 @@ const StarLink = (props) => {
                 <br></br>
                 Launch Date: {launchDate}
                 <br></br>
-                <button>View in Maps</button>
+                <a href='/tracker'>View in Map</a>
             </div> 
             <br></br>
             <div>
@@ -135,7 +137,7 @@ const StarLink = (props) => {
                 <br></br>
                 Launch Date: {launchDate2}
                 <br></br>
-                <button>View in Maps</button>
+                <a href='/tracker'>View in Map</a>
             </div> 
             <br></br>
             <div>
@@ -147,7 +149,7 @@ const StarLink = (props) => {
                 <br></br>
                 Launch Date: {launchDate3}
                 <br></br>
-                <button>View in Maps</button>
+                <a href='/tracker'>View in Map</a>
             </div> 
             <br></br>
             <div>
@@ -158,7 +160,7 @@ const StarLink = (props) => {
                 <br></br>
                 Launch Date: {launchDate4}
                 <br></br>
-                <button>View in Maps</button>
+                <a href='/tracker'>View in Map</a>
             </div> 
                 <br></br>
             <div>
