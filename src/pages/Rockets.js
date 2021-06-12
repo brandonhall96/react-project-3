@@ -31,9 +31,11 @@ const Rockets = (props) => {
     
    
     const allRockets = rocketData.map((rock, idx)=> {
-        return <div key={idx}>
+        return <div className="rockets" key={idx}>
             <h2>{rock.name}</h2>
+            <br></br>
             <h2>{rock.first_flight}</h2>
+            <br></br>
             <h2>{rock.description}</h2>
           
             </div>
