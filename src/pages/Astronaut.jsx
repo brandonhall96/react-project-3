@@ -40,6 +40,7 @@ const [astronauts, setAstronauts] = useState([])
             <li>Favorite Astronaut: {astronaut.favAstronaut}</li>
             <li>Age: {astronaut.age}</li>
             <button onClick={()=> deleteAstro(astronaut._id)}>Delete this Astronaut</button>
+            <Link to={`/edit/${astronaut._id}`}>Edit {astronaut.name}</Link>
             {/* <li><strong>What qualifies you to be an ASTRONAUT?</strong> {astronaut.question}</li> */}
             <hr></hr>
             </div>
@@ -67,7 +68,6 @@ const [astronauts, setAstronauts] = useState([])
             <div className="col-md-7 offset-md-3">
                 <div className="card card-body">
                   {allAstronauts}
-                  {/* <Link to={`/edit/${props.bounty._id}`}>Edit {props.bounty.name}</Link><br/> */}
                   {/* <button onClick={deleteAstro}>Delete this Astronaut</button> */}
                 </div>
             </div>

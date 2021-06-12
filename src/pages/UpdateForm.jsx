@@ -1,12 +1,14 @@
 
-//=========================ASTRONAUT APPLICATION===================================//
+//=========================ASTRONAUT UPDATE APPLICATION===================================//
 import setAuthToken from '../utils/setAuthToken'
+import { useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 const CONNECTION_URI = process.env.DB_URI || "http://localhost:8080";
 
-const Form = (props) => {
+
+const UpdateForm = (props) => {
     const [name, setName] = useState('');
     const [age, setAge] = useState('');
     const [favAstronaut, setFavAstronaut] = useState('');
@@ -37,16 +39,23 @@ const handleQuestion = (e) => {
 
 
 //===========SUBMIT-FORM=====================//
+
+
+let history = useHistory();
+
 const handleSubmit = async (e) => {
     e.preventDefault();
     const payload = {name, age, favAstronaut, favSpaceMovie, question }
-    let url = CONNECTION_URI+"/api/astros"
+    let url = CONNECTION_URI+"/api/astros/"+ props.id
     console.log(`Yo - database ${url} is working!!`)   
     await setAuthToken(localStorage.getItem("jwtToken"))
-    axios.post(url, payload)
+    axios.put(url, payload)
     .then( res => {
         console.log(res.data);
-        props.history.push('/astronauts')
+    
+    })
+    .then (res => {
+        history.push('/astronauts')
     })
     .catch(err => {
         console.log(err)
@@ -60,7 +69,7 @@ const handleSubmit = async (e) => {
         <div className="row mt-4">
             <div className="col-md-7 offset-md-3">
                 <div className="card card-body">
-                    <h2 className="py-2">APPLICATION TO BE AN ASTRONAUT</h2>
+                    <h2 className="py-2">Update Astronaut Application</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
@@ -90,4 +99,4 @@ const handleSubmit = async (e) => {
     )
 }
 
-export default Form
+export default UpdateForm

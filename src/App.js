@@ -21,6 +21,7 @@ import axios from 'axios';
 import Form from './components/Form';
 import Astronaut from './pages/Astronaut';
 import Edit from './pages/Edit';
+import UpdateForm from './pages/UpdateForm';
 
 
 
