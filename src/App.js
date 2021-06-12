@@ -76,6 +76,22 @@ function App() {
   }
 
 
+//   const CONNECTION_URI = process.env.DB_URI || "http://localhost:8000";
+//   const [rocketData, setRocketData] = useState([]);
+
+
+//   useEffect(() =>{
+//       let url = CONNECTION_URI+'/api/rockets'
+//       axios.get(url)
+//       .then(response => {
+//         //   setRocketData(response.data)
+//           console.log(response.data.rockets)
+
+//       })
+//   })
+  
+
+
 //   useEffect(() => {
 //     let url = 'https://api.spacexdata.com/v4/starlink/'
 //     axios.get(url).then(res => {
@@ -122,7 +138,7 @@ function App() {
             <PrivateRoute path = '/profile' component={Profile} user={currentUser} handleLogout={handleLogout} />
             <Route path='/tracker' component={Tracker} />
             <Route path='/starlink' component={StarLink} />
-            <Route path='/rockets' component={Rockets} />
+            <Route path='/rockets'  component={Rockets} />
             <PrivateRoute path='/form' component={Form} user={currentUser} />
             <Route path='/astronauts' component={Astronaut} />
             <Route path='/edit' component={Edit} />

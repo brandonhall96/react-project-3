@@ -37,13 +37,15 @@ const StarLink = (props) => {
  const [longitude5, setLongitude5] = useState('')
  const [latitude5, setLatitude5] = useState('')
  const [launchDate5, setLaunchDate5] = useState('')
+
+ const [satData, setSatData] = useState([]);
 //  const [lon] = useState('')
 
 
  useEffect(() => {
      let url = 'https://api.spacexdata.com/v4/starlink/5eed7716096e590006985825'
      axios.get(url).then(res => {
-         console.log(res.data)
+        
          setName(res.data.spaceTrack.OBJECT_NAME)
          setLongitude(res.data.longitude)
          setLatitude(res.data.latitude)
@@ -55,7 +57,7 @@ const StarLink = (props) => {
  useEffect(() => {
      let url = 'https://api.spacexdata.com/v4/starlink/5eed7714096e590006985623'
      axios.get(url).then(res => {
-         console.log(res.data)
+         
          setName2(res.data.spaceTrack.OBJECT_NAME)
          setLongitude2(res.data.longitude)
          setLatitude2(res.data.latitude)
@@ -66,7 +68,7 @@ const StarLink = (props) => {
  useEffect(() => {
      let url = 'https://api.spacexdata.com/v4/starlink/5eed7714096e590006985634'
      axios.get(url).then(res => {
-         console.log(res.data)
+        
          setName3(res.data.spaceTrack.OBJECT_NAME)
          setLongitude3(res.data.longitude)
          setLatitude3(res.data.latitude)
@@ -77,7 +79,7 @@ const StarLink = (props) => {
  useEffect(() => {
      let url = 'https://api.spacexdata.com/v4/starlink/5eed7714096e59000698563f'
      axios.get(url).then(res => {
-         console.log(res.data)
+        
          setName4(res.data.spaceTrack.OBJECT_NAME)
          setLongitude4(res.data.longitude)
          setLatitude4(res.data.latitude)
@@ -88,13 +90,23 @@ const StarLink = (props) => {
  useEffect(() => {
      let url = 'https://api.spacexdata.com/v4/starlink/5eed7714096e590006985648'
      axios.get(url).then(res => {
-         console.log(res.data)
+         
          setName5(res.data.spaceTrack.OBJECT_NAME)
          setLongitude5(res.data.longitude)
          setLatitude5(res.data.latitude)
          setLaunchDate5(res.data.spaceTrack.LAUNCH_DATE)
      })
  })
+//  useEffect(() => {
+//      let url = 'https://api.spacexdata.com/v4/starlink/'
+//      axios.get(url).then(res => {
+//          setSatData(res.data)
+         
+//         //  console.log(res.data)
+         
+//      })
+     
+//  })
 
 
 

@@ -5,6 +5,7 @@ import { NavLink, Link } from 'react-router-dom';
 import Color from 'cesium/Source/Core/Color';
 import axios from 'axios';
 import React , {useState, useEffect} from 'react'
+import PointGraphics from 'cesium/Source/DataSources/PointGraphics';
 
 
 
@@ -42,7 +43,6 @@ const Tracker = (props) => {
     useEffect(() => {
         let url = 'https://api.spacexdata.com/v4/starlink/5eed7716096e590006985825'
         axios.get(url).then(res => {
-            console.log(res.data)
             setName(res.data.spaceTrack.OBJECT_NAME)
             setLongitude(res.data.longitude)
             setLatitude(res.data.latitude)
@@ -54,7 +54,6 @@ const Tracker = (props) => {
     useEffect(() => {
         let url = 'https://api.spacexdata.com/v4/starlink/5eed7714096e590006985623'
         axios.get(url).then(res => {
-            console.log(res.data)
             setName2(res.data.spaceTrack.OBJECT_NAME)
             setLongitude2(res.data.longitude)
             setLatitude2(res.data.latitude)
@@ -65,7 +64,6 @@ const Tracker = (props) => {
     useEffect(() => {
         let url = 'https://api.spacexdata.com/v4/starlink/5eed7714096e590006985634'
         axios.get(url).then(res => {
-            console.log(res.data)
             setName3(res.data.spaceTrack.OBJECT_NAME)
             setLongitude3(res.data.longitude)
             setLatitude3(res.data.latitude)
@@ -76,7 +74,6 @@ const Tracker = (props) => {
     useEffect(() => {
         let url = 'https://api.spacexdata.com/v4/starlink/5eed7714096e59000698563f'
         axios.get(url).then(res => {
-            console.log(res.data)
             setName4(res.data.spaceTrack.OBJECT_NAME)
             setLongitude4(res.data.longitude)
             setLatitude4(res.data.latitude)
@@ -87,7 +84,6 @@ const Tracker = (props) => {
     useEffect(() => {
         let url = 'https://api.spacexdata.com/v4/starlink/5eed7714096e590006985648'
         axios.get(url).then(res => {
-            console.log(res.data)
             setName5(res.data.spaceTrack.OBJECT_NAME)
             setLongitude5(res.data.longitude)
             setLatitude5(res.data.latitude)
@@ -109,12 +105,20 @@ const Tracker = (props) => {
             {/* <NavLink className="nav-link"  to="/rockets">Rockets</NavLink> */}
             <Entity
             
+            
                 name={name}
+
+                description={name}
+                description={launchDate}
+                    
+                
+                
+
                 // description=
-                position={Cartesian3.fromDegrees(longitude, latitude, 1900000)}
+                position={Cartesian3.fromDegrees(longitude, latitude, 2000000)}
                 
                 point={{
-                    pixelSize: 20,
+                    pixelSize: 10,
                     color: Color.RED
                     
                 }}
@@ -123,10 +127,10 @@ const Tracker = (props) => {
             
                 name={name2}
                
-                position={Cartesian3.fromDegrees(longitude2, latitude2, 1900000)}
+                position={Cartesian3.fromDegrees(longitude2, latitude2, 2000000)}
                 
                 point={{
-                    pixelSize: 20,
+                    pixelSize: 10,
                     color: Color.RED
                     
                 }}
@@ -135,10 +139,10 @@ const Tracker = (props) => {
             
                 name={name3}
              
-                position={Cartesian3.fromDegrees(longitude3, latitude3, 1900000)}
+                position={Cartesian3.fromDegrees(longitude3, latitude3, 2000000)}
                 
                 point={{
-                    pixelSize: 20,
+                    pixelSize: 10,
                     color: Color.RED
                     
                 }}
@@ -147,10 +151,10 @@ const Tracker = (props) => {
             
                 name={name4}
               
-                position={Cartesian3.fromDegrees(longitude4, latitude4, 1900000)}
+                position={Cartesian3.fromDegrees(longitude4, latitude4, 2000000)}
                 
                 point={{
-                    pixelSize: 20,
+                    pixelSize: 10,
                     color: Color.RED
                     
                 }}
@@ -162,15 +166,15 @@ const Tracker = (props) => {
               
 
                 
-                position={Cartesian3.fromDegrees(longitude5, latitude5, 1900000)}
+                position={Cartesian3.fromDegrees(longitude5, latitude5, 2000000)}
                 
                 point={{
-                    pixelSize: 20,
+                    pixelSize: 10,
                     color: Color.RED
                     
                 }}
             />
-   
+
         </Viewer>
     )
 }
