@@ -32,11 +32,12 @@ const Rockets = (props) => {
    
     const allRockets = rocketData.map((rock, idx)=> {
         return <div className="rockets" key={idx}>
-            <h2>{rock.name}</h2>
+            <h1>{rock.name}</h1>
             <br></br>
-            <h2>{rock.first_flight}</h2>
+            <h3>{rock.first_flight}</h3>
             <br></br>
-            <h2>{rock.description}</h2>
+            <h3>{rock.description}</h3>
+            <img src={rock.flickr_images}></img>
           
             </div>
     })
@@ -44,9 +45,20 @@ const Rockets = (props) => {
 
 
     return(
+    <div>
         <div>
-            {allRockets}
+            {allRockets[0]}
         </div>
+        <div>
+            {allRockets[1]}
+        </div>
+        <div>
+            {allRockets[2]}
+        </div>
+        <div>
+            {allRockets[3]}
+        </div>
+    </div>
     )
 }
 
