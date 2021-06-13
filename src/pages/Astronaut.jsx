@@ -6,6 +6,7 @@ import axios from 'axios';
 import {Link} from 'react-router-dom'
 const CONNECTION_URI = process.env.DB_URI || "http://localhost:8080";
 
+
     
 
 const Astronaut =  (props) =>{
@@ -33,44 +34,44 @@ const [astronauts, setAstronauts] = useState([])
 
     },[astronauts])
 
-    const allAstronauts = astronauts.map((astronaut, i)=> {
+    const allAstronauts = astronauts.map((astronaut, i) => {
         return <div key={i}>
             <h2>{astronaut.name}</h2>
-            <li>Favorite Space Movie: {astronaut.favSpaceMovie}</li>
-            <li>Favorite Astronaut: {astronaut.favAstronaut}</li>
-            <li>Age: {astronaut.age}</li>
-            <button onClick={()=> deleteAstro(astronaut._id)}>Delete this Astronaut</button>
-            <Link to={`/edit/${astronaut._id}`}>Edit {astronaut.name}</Link>
-            {/* <li><strong>What qualifies you to be an ASTRONAUT?</strong> {astronaut.question}</li> */}
-            <hr></hr>
-            </div>
+            <p>Age: {astronaut.age}</p>
+            <p>Favorite Space Movie: {astronaut.favSpaceMovie}</p>
+            <p>Favorite Astronaut: {astronaut.favAstronaut}</p>
+            <p><strong>Qualifications:</strong> {astronaut.question}</p>
+            
+                <button type="button" class="btn btn-outline-danger">
+                    <Link className="edit"
+                    to={`/edit/${astronaut._id}`}
+                    >Edit</Link></button>
+                    {' '}
+                <button type="button" class="btn btn-outline-danger"
+                onClick={() => deleteAstro(astronaut._id)}
+                >Delete</button>
+                <hr></hr>
+            
+        </div>
     })
-
+   
 
     const deleteAstro = (id) => {
 
         axios.delete(`http://localhost:8080/api/astros/${id}`)
         .then(console.log(id))
         
-        
-        // fetch(`http://localhost:8080/api/astros/${id}`, {
-        //   method: "DELETE",
-        // }).then((res) => {
-        //     console.log("inside delete")
-        //     console.log(id)
-        // //   props.reload();
-        // //   props.history.push("/");
-        // });
       };
     return (
 
         <div className="row mt-4">
-            <div className="col-md-7 offset-md-3">
+            <div className="col-md-8 offset-md-3">
                 <div className="card card-body">
+                <div class="text-center">
                   {allAstronauts}
-                  {/* <button onClick={deleteAstro}>Delete this Astronaut</button> */}
                 </div>
             </div>
+        </div>
         </div>
     )
 }

@@ -17,8 +17,10 @@ const Profile = (props) => {
         <h1>Profile</h1>
         <p><strong>Name:</strong> { name }</p> 
         <p><strong>Email:</strong> { email }</p> 
-        <p><strong>ID:</strong> { id }</p>
+        {/* <p><strong>ID:</strong> { id }</p> */}
+        <h5><strong>Click below to apply to be an astronaut</strong></h5>
     </div>) : <h4>Loading...</h4>
+        
 
     const errorDiv = () => {
         return (
@@ -29,9 +31,21 @@ const Profile = (props) => {
     };
     
     return (
-        <div>
-            { props.user ? userData : errorDiv() }
+        <div className="row mt-4">
+            <div className="col-md-8 offset-md-3">
+                <div className="card card-body">
+                    <div class="text-center">
+                        <div>
+                            {props.user ? userData : errorDiv()}
+
+                            <button type="button" class="btn btn-outline-danger"><Link className="edit" to="/form">Apply Here!</Link></button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
     );
 
 }
