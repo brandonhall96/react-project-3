@@ -72,10 +72,50 @@ body {
     
 }
 
-
-
-/* .map {
+.profile {
     color: white;
-    margin-bottom: 100px;
-    font-size: 100px;
-} */
+}
+
+.button {
+  color: black; 
+  border: 2px solid black;
+  height: 250px;
+  width: 350px;
+
+  
+
+}
+
+#butttext {
+    color: white;
+    font-size: 25px;
+}
+
+#butt1 {
+    background-image: url('./images/buttbg1.jpeg');
+    background-size: 350px 250px;
+
+}
+#butt2 {
+    background-image: url('./images/buttbg3.jpeg');
+    background-size: 350px 250px;
+}
+#butt3 {
+    background-image: url('./images/buttbg2.jpeg');
+    background-size: 350px 250px;
+}
+#butt4 {
+    background-image: url('./images/buttbg4.jpeg');
+    background-size: 350px 250px;
+}
+#butt5 {
+    background-image: url('./images/buttbg7.jpeg');
+    background-size: 350px 250px;
+}
+#butt6 {
+    background-image: url('./images/buttbg8.jpeg');
+    background-size: 350px 250px;
+}
+
+
+

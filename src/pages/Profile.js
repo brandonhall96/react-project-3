@@ -29,7 +29,7 @@ const Profile = (props) => {
     };
     
     return (
-        <div>
+        <div className='profile'>
             { props.user ? userData : errorDiv() }
         </div>
     );

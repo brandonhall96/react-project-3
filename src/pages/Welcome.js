@@ -10,16 +10,27 @@ const Welcome = () => {
 
     return (
         <div>
-            <h1 id="welheader">This is our Dashboard</h1>
+            
             <div className="container">
-                <button className="nav-item">
-                    <NavLink className="nav-link" exact to="/tracker">Live Tracker</NavLink>
+                <button id="butt1" className="button">
+                    <NavLink id="butttext" className="nav-link" exact to="/tracker">Live Tracker</NavLink>
                 </button>
-                <button className="nav-item">
-                    <NavLink className="nav-link" exact to="/starlink">Starlink</NavLink>
+                <button id="butt2" className="button">
+                    <NavLink id="butttext" className="nav-link" exact to="/starlink">Starlink</NavLink>
                 </button>
-                <button className="nav-item">
-                    <NavLink className="nav-link" exact to="/rockets">Rockets</NavLink>
+                <button id="butt3" className="button"> 
+                    <NavLink id="butttext" className="nav-link" exact to="/rockets">Rockets</NavLink>
+                </button>
+            </div>
+            <div className="container">
+                <button id="butt4" className="button">
+                    <NavLink id="butttext" className="nav-link" exact to="/astronauts">Astronauts</NavLink>
+                </button>
+                <button id="butt5" className="button">
+                    <NavLink id="butttext" className="nav-link" exact to="/dragons">Dragons</NavLink>
+                </button>
+                <button id="butt6" className="button"> 
+                    <NavLink id="butttext" className="nav-link" exact to="/crew">Crew</NavLink>
                 </button>
             </div>
             <br />     
