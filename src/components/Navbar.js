@@ -29,6 +29,9 @@ const Navbar = (props) => {
                         <li className="nav-item">
                             <NavLink className="nav-link"  to="/astronauts">Astronauts</NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link"  to="/dragons">Dragons</NavLink>
+                        </li>
                     </ul>
                     {
                         props.isAuth 
