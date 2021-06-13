@@ -31,6 +31,10 @@ const Profile = (props) => {
     };
     
     return (
+
+        <div className='profile'>
+            { props.user ? userData : errorDiv() }
+
         <div className="row mt-4">
             <div className="col-md-8 offset-md-3">
                 <div className="card card-body">
@@ -44,6 +48,7 @@ const Profile = (props) => {
                     </div>
                 </div>
             </div>
+
         </div>
 
     );
