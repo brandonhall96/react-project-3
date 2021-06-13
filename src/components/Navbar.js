@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import fakexLogo from './fakeX1.png';
 
 const Navbar = (props) => {
     return (
