@@ -37,6 +37,7 @@ const Rockets = (props) => {
             <h3>{rock.first_flight}</h3>
             <br></br>
             <h3>{rock.description}</h3>
+            <img src={rock.flickr_images}></img>
           
             </div>
     })
@@ -44,9 +45,20 @@ const Rockets = (props) => {
 
 
     return(
+    <div>
         <div>
-            {allRockets}
+            {allRockets[0]}
         </div>
+        <div>
+            {allRockets[1]}
+        </div>
+        <div>
+            {allRockets[2]}
+        </div>
+        <div>
+            {allRockets[3]}
+        </div>
+    </div>
     )
 }
 
