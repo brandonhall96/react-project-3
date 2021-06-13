@@ -79,3 +79,17 @@ body {
     margin-bottom: 100px;
     font-size: 100px;
 } */
+
+.edit {
+    color: rgb(231, 0, 50);
+    
+}
+
+.edit:hover {
+    color: black;
+    text-decoration: none;
+}
+
+/* .navbar-brand {
+    background-image: url(./imgs/fakeX1.png);
+} */

@@ -4,10 +4,6 @@ import '../App.css'
 
 const Welcome = () => {
 
-
-
-
-
     return (
         <div>
             <h1 id="welheader">This is our Dashboard</h1>
@@ -24,7 +20,7 @@ const Welcome = () => {
             </div>
             <br />     
             <h1 className="bio">Welcome to FakeX! This is your opportunity to learn about many of SpaceX's crew and technologies as well as to view a live tracker of SpaceX's Starlink satelites. Not just that, you can also apply to become a SpaceX astronaut and if you have what it takes, maybe you will get to crew the next Dragon!</h1>
-        </div>
+            </div>
     )
 }
 
