@@ -22,6 +22,7 @@ import Form from './components/Form';
 import Astronaut from './pages/Astronaut';
 import Edit from './pages/Edit';
 import UpdateForm from './pages/UpdateForm';
+import Dragons from './pages/Dragons';
 
 
 
@@ -140,6 +141,7 @@ function App() {
             <Route path='/tracker' component={Tracker} />
             <Route path='/starlink' component={StarLink} />
             <Route path='/rockets'  component={Rockets} />
+            <Route path='/dragons'  component={Dragons} />
             <PrivateRoute path='/form' component={Form} user={currentUser} />
             <PrivateRoute path='/astronauts' component={Astronaut} user={currentUser} />
             <Route path='/edit/:id' component={Edit} />

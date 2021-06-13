@@ -5,19 +5,17 @@ import App from '../App.css'
 import setAuthToken from '../utils/setAuthToken'
 const CONNECTION_URI = process.env.DB_URI || "http://localhost:8080";
 
+const Dragons = (props) => {
 
-const Rockets = (props) => {
-    
-
-    const [rocketData, setRocketData] = useState([]);
+    const [dragonData, setDragonData] = useState([]);
     
     
     useEffect(() =>{
-        let url = CONNECTION_URI+'/api/rockets'
+        let url = CONNECTION_URI+'/api/dragons'
         setAuthToken(localStorage.getItem("jwtToken"))
         axios.get(url)
         .then((res) =>{
-            setRocketData(res.data.rockets)
+            setDragonData(res.data.dragons)
             
         })
     }, [])
@@ -26,28 +24,31 @@ const Rockets = (props) => {
         
         
         
-    },[rocketData])
-    
-    
-   
-    const allRockets = rocketData.map((rock, idx)=> {
+    },[dragonData])
+
+
+    const allDragons = dragonData.map((drag, idx)=> {
         return <div className="rockets" key={idx}>
-            <h2>{rock.name}</h2>
+            <h2>{drag.name}</h2>
             <br></br>
-            <h2>{rock.first_flight}</h2>
+            <h2>{drag.crew_capacity}</h2>
             <br></br>
-            <h2>{rock.description}</h2>
+            <h2>{drag.first_flight}</h2>
           
             </div>
     })
-        
+
+
+
+
 
 
     return(
         <div>
-            {allRockets}
+            {allDragons}
+
         </div>
     )
 }
 
-export default Rockets;
+export default Dragons;

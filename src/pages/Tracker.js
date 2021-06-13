@@ -119,7 +119,7 @@ const Tracker = (props) => {
             
                 name={name}
                 description={
-                    `name: ${name}
+                    `Name: ${name}
                     <br/> Launch Date ${launchDate}
                     <br/> Longitude: ${longitude}
                     <br/> Latitude: ${latitude}
@@ -139,7 +139,7 @@ const Tracker = (props) => {
             
                 name={name2}
                 description={
-                    `name: ${name2} 
+                    `Name: ${name2} 
                     <br/> Launch Date ${launchDate2}
                     <br/> Longitude: ${longitude2}
                     <br/> Latitude: ${latitude2}
@@ -160,7 +160,7 @@ const Tracker = (props) => {
             
                 name={name3}
                 description={
-                    `name: ${name3} 
+                    `Name: ${name3} 
                     <br/> Launch Date ${launchDate3}
                     <br/> Longitude: ${longitude3}
                     <br/> Latitude: ${latitude3}
@@ -180,7 +180,7 @@ const Tracker = (props) => {
             
                 name={name4}
                 description={
-                    `name: ${name4} 
+                    `Name: ${name4} 
                     <br/> Launch Date ${launchDate4}
                     <br/> Longitude: ${longitude4}
                     <br/> Latitude: ${latitude4}
@@ -201,7 +201,7 @@ const Tracker = (props) => {
                 name={name5}
 
                 description={
-                    `name: ${name5} 
+                    `Name: ${name5} 
                     <br/> Launch Date ${launchDate5}
                     <br/> Longitude: ${longitude5}
                     <br/> Latitude: ${latitude5}
