@@ -4,7 +4,7 @@ html {
 }
 body {
   margin-bottom: 60px; /* Margin bottom by footer height */
-  background-image: url(https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80);
+  background-image: url(https://images.pexels.com/photos/957061/milky-way-starry-sky-night-sky-star-957061.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
   background-size: cover;
 }
 .footer {
@@ -22,6 +22,7 @@ body {
 
 .bio {
     color: white;
+    
 }
 
 /* .fakexLogo {
@@ -135,4 +136,12 @@ body {
 /* .navbar-brand {
     background-image: url(./imgs/fakeX1.png);
 } */
+
+.starbutton {
+    margin-left: 750px;
+    margin-top: 100px;
+    width: 400px;
+    height: 50px;
+    
+}
 

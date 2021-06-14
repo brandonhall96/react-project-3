@@ -38,8 +38,8 @@ const StarLink = (props) => {
  const [latitude5, setLatitude5] = useState('')
  const [launchDate5, setLaunchDate5] = useState('')
 
- const [satData, setSatData] = useState([]);
-//  const [lon] = useState('')
+//  const [satData, setSatData] = useState([]);
+
 
 
  useEffect(() => {
@@ -125,7 +125,7 @@ const StarLink = (props) => {
                 <br></br>
                 Launch Date: {launchDate}
                 <br></br>
-                <a href='/tracker'>View in Map</a>
+            
             </div> 
             <br></br>
             <div>
@@ -137,7 +137,7 @@ const StarLink = (props) => {
                 <br></br>
                 Launch Date: {launchDate2}
                 <br></br>
-                <a href='/tracker'>View in Map</a>
+               
             </div> 
             <br></br>
             <div>
@@ -149,7 +149,7 @@ const StarLink = (props) => {
                 <br></br>
                 Launch Date: {launchDate3}
                 <br></br>
-                <a href='/tracker'>View in Map</a>
+             
             </div> 
             <br></br>
             <div>
@@ -160,7 +160,7 @@ const StarLink = (props) => {
                 <br></br>
                 Launch Date: {launchDate4}
                 <br></br>
-                <a href='/tracker'>View in Map</a>
+              
             </div> 
                 <br></br>
             <div>
@@ -171,8 +171,9 @@ const StarLink = (props) => {
                 <br></br>
                 Launch Date: {launchDate5}
                 <br></br>
-                <button>View in Maps</button>
+                
             </div> 
+
 
             {/* <Tracker /> */}
 
@@ -183,6 +184,7 @@ const StarLink = (props) => {
             </div>
 
             
+            <button class='starbutton'><a href='/tracker'>View in Tracker</a></button>
                 
                 
        
