@@ -3,15 +3,14 @@ import Form from '../components/Form'
 import setAuthToken from '../utils/setAuthToken'    
 import { useState, useEffect } from "react";
 import axios from 'axios';
-import {Link} from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
+
 const CONNECTION_URI = process.env.DB_URI || "http://localhost:8080";
-
-
-    
 
 const Astronaut =  (props) =>{
 //
 const [astronauts, setAstronauts] = useState([])
+const [redirect, setRedirect] = useState(false)
 
     useEffect(()=> {
         let url = CONNECTION_URI+"/api/astros"
@@ -56,12 +55,18 @@ const [astronauts, setAstronauts] = useState([])
     })
    
 
-    const deleteAstro = (id) => {
-
+    const deleteAstro =  async (id) => {
+        //update to .env 
+        console.log(id)
+        setAuthToken(localStorage.getItem("jwtToken"))
         axios.delete(`http://localhost:8080/api/astros/${id}`)
-        .then(console.log(id))
+        .then(response => {
+            setRedirect(true)
+            console.log(response.data)
+        })
         
       };
+      if (redirect) return <Redirect to="/astronauts" />
     return (
 
         <div className="row mt-4">

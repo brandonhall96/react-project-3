@@ -23,6 +23,7 @@ import Astronaut from './pages/Astronaut';
 import Edit from './pages/Edit';
 import UpdateForm from './pages/UpdateForm';
 import Dragons from './pages/Dragons';
+import Crew from './pages/Crew';
 
 
 
@@ -138,12 +139,13 @@ function App() {
             <Route path='/about' component={About} />
             <Route exact path='/' component={Welcome} />
             <PrivateRoute path = '/profile' component={Profile} user={currentUser} handleLogout={handleLogout} />
-            <Route path='/tracker' component={Tracker} />
-            <Route path='/starlink' component={StarLink} />
-            <Route path='/rockets'  component={Rockets} />
-            <Route path='/dragons'  component={Dragons} />
+            <PrivateRoute path='/tracker' component={Tracker} user={currentUser}/>
+            <PrivateRoute path='/starlink' component={StarLink} user={currentUser}/>
+            <PrivateRoute path='/rockets'  component={Rockets} user={currentUser} />
+            <PrivateRoute path='/dragons'  component={Dragons} user={currentUser}/>
             <PrivateRoute path='/form' component={Form} user={currentUser} />
             <PrivateRoute path='/astronauts' component={Astronaut} user={currentUser} />
+            <PrivateRoute path='/crew' component={Crew} user={currentUser} />
             <Route path='/edit/:id' component={Edit} />
 
         </Switch>

@@ -6,7 +6,6 @@ const Welcome = () => {
 
     return (
         <div>
-            
             <div className="container">
                 <button id="butt1" className="button">
                     <NavLink id="butttext" className="nav-link" exact to="/tracker">Live Tracker</NavLink>
@@ -30,7 +29,7 @@ const Welcome = () => {
                 </button>
             </div>
             <br />     
-            <h1 className="bio">Welcome to FakeX! This is your opportunity to learn about many of SpaceX's crew and technologies as well as to view a live tracker of SpaceX's Starlink satelites. Not just that, you can also apply to become a SpaceX astronaut and if you have what it takes, maybe you will get to crew the next Dragon!</h1>
+            <h1 id="bio" class="text-center">Welcome to FakeX! This is your opportunity to learn about many of SpaceX's crew and technologies as well as to view a live tracker of SpaceX's Starlink satelites. Not just that, you can also apply to become a SpaceX astronaut and if you have what it takes, maybe you will get to crew the next Dragon!</h1>
             </div>
     )
 }

@@ -4,11 +4,7 @@ import {Link} from 'react-router-dom';
 import App from '../App.css'
 import Tracker from './Tracker';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-
-
-
-
-
+import setAuthToken from '../utils/setAuthToken'
 
 
 const StarLink = (props) => {
@@ -43,6 +39,7 @@ const StarLink = (props) => {
 
 
  useEffect(() => {
+     setAuthToken(localStorage.getItem("jwtToken"))
      let url = 'https://api.spacexdata.com/v4/starlink/5eed7716096e590006985825'
      axios.get(url).then(res => {
         
@@ -55,6 +52,7 @@ const StarLink = (props) => {
 
 
  useEffect(() => {
+     setAuthToken(localStorage.getItem("jwtToken"))
      let url = 'https://api.spacexdata.com/v4/starlink/5eed7714096e590006985623'
      axios.get(url).then(res => {
          
@@ -66,6 +64,7 @@ const StarLink = (props) => {
  })
 
  useEffect(() => {
+    setAuthToken(localStorage.getItem("jwtToken"))
      let url = 'https://api.spacexdata.com/v4/starlink/5eed7714096e590006985634'
      axios.get(url).then(res => {
         
@@ -77,6 +76,7 @@ const StarLink = (props) => {
  })
 
  useEffect(() => {
+    setAuthToken(localStorage.getItem("jwtToken"))
      let url = 'https://api.spacexdata.com/v4/starlink/5eed7714096e59000698563f'
      axios.get(url).then(res => {
         
@@ -88,6 +88,7 @@ const StarLink = (props) => {
  })
 
  useEffect(() => {
+    setAuthToken(localStorage.getItem("jwtToken"))
      let url = 'https://api.spacexdata.com/v4/starlink/5eed7714096e590006985648'
      axios.get(url).then(res => {
          
@@ -115,6 +116,7 @@ const StarLink = (props) => {
 
 
     return(
+        
         <div id="star">
             <div className="sats">
                 <h1>{name}</h1>
@@ -174,7 +176,7 @@ const StarLink = (props) => {
                 
             </div> 
 
-
+        
             {/* <Tracker /> */}
 
             <div id="aboutstar">
