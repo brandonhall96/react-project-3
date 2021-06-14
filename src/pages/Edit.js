@@ -1,6 +1,6 @@
 import React from 'react'
 import UpdateForm from './UpdateForm'
-
+//========================UPDATE ASTRO FUNCTION==================================//
 function Edit(props) {
     console.log("EDIT Page:",props)
     console.log(props.match.params.id)

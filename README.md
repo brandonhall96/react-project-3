@@ -1,24 +1,29 @@
-![Imgur](https://i.imgur.com/yq7noDD.png)
-![](https://i.imgur.com/ikboIVi.png)
+![fakex](https://imgur.com/dD1ukPU.png)
+<!-- ![react-logo](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png) -->
+<!-- ![](https://i.imgur.com/ikboIVi.png) -->
 ![Issues](https://img.shields.io/github/issues/brandonhall96/react-project-3)![Forks](https://img.shields.io/github/forks/brandonhall96/react-project-3)![License](https://img.shields.io/github/stars/brandonhall96/react-project-3)![Repo-Size](	https://img.shields.io/github/license/brandonhall96/react-project-3)![Contributors](https://img.shields.io/github/contributors/brandonhall96/Project-3-Backend)
 Fake-X-front-End is the frontend of a full space-x starlink tracker 
-## Collaborators
+# Link
+## https://fakex-react.herokuapp.com/
+# Collaborators
  ```sh
  https://github.com/jakeschultz89
  https://github.com/brandonhall96
  https://github.com/vinnyvilasboa
  https://github.com/behemoth0132
  ```
-- Type "npm run star-craco" in terminal
+- Scream fakeX and type "npm run star-craco" in terminal
 - ✨Magic ✨
-## Features
-- Use the seed .js file to add the static data we included in order to view it in mongoDB
-- The data used in the seed will reflect to the front end. 
-- The magic is just getting started please scroll to the end to see the link for the front end!
-## Tech
+
+# Features
+- Allows you to be an applicant for a super real and exclusive FakeX astronaut program
+- You can track 5 of the 1500 Starlink satellites (real location and height based on SPACEX api call)
+- Learn about SpaceX Rockets, crew, and Dragons.
+# Tech
 Fake-X-Front-End uses the only technology that matters to work properly:
 - [React] - React. js is an open-source JavaScript library that is used for building user interfaces specifically for single-page applications
-## Installation
+
+# Installation
 Fake-X requires [Node.js](https://nodejs.org/) to run.
 You first need to clone the repository
 ```
@@ -34,26 +39,41 @@ For .env... use whatever values you would like for the items included in the .en
 MONGO_URI=""
 JWT_SECRET=""
 ```
-Next... Go to your terminal and 
-```sh 
-Run the command (mongod) first
-```
-```sh
-Then follow up with the (mongo) command in a seperate terminal window
-```
-## Code Snippets to be Proud of 
-![](https://i.imgur.com/ES6BDXv.png)
-> The above code snippet is something we are very proud of due to the fact that we went through alot of trial and error to get this to work. The purpose of the above function is to update a specific ```astro``` that has already been created, initially we used the ```update``` method and that didnt work because it only updated the first ```astro``` in the database instead of the one we tried to pull and update by the i.d.. Once we changed it to ```findByIDAndUpdate``` it fixed all of our problems but we defninently had to troubleshoot this for a few days but thankfully with some needed help we got it to work.
-## Schema Idea
-![](https://i.imgur.com/25wp8LI.jpg)
-> Above is our thinking behind our schema's and how they connect the User schema is self explanitory it collects the information input by the user and saves it to the database, this schema connects to the ```Astros Scehma``` meaning a user can create an astro and conduct other things such as update and delete them. The other schemas are stactic data that we seeded into our databse from the Space-X-API ```https://github.com/r-spacex/SpaceX-API/tree/master/docs/v4``` 
-Verify the deployment by navigating to your server address in
-your preferred browser.
-```sh
-http://localhost:8080
-```
-> our backend is also deployed on heroku at ```https://afternoon-lowlands-89410.herokuapp.com/```
+---
+# User Stories 
+## 1. For fans of spaceX and anything space related, that have a strong passion about rockets, satellites and astronauts
+## 2. A place that people can share their qualifications to be an astronaut and see other applications while learning about rockets, satellites and astronauts. 
+---
+# WireFrame
+![wireframe](https://imgur.com/9GN3TXS.png)
+> Above is the original wireframe that we used as reference to get us started.
+![](https://imgur.com/0QxxiZf.png)
+---
+![](https://imgur.com/P1SfUlC.png)
+---
+![](https://imgur.com/o7at6k3.png)
+---
+# Code Snippets to be Proud of 
+![code-App.js](https://imgur.com/IpXH2Xl.png)
+
+--- 
+
+![code-Rockets.js](https://imgur.com/lyqMOj4.png)
+> The Above code is pretty simple but it made things so much simpler for us. By doing that we were able to keep the ```welcome page``` looking great without having to sacrifice the privacy and perks of being a user. By doing that we can keep all the links visible on the welcome page and once clicked on, it redirects the user to ```login``` if not yet logged in. The simplest way to do it proved to be the best one!
+---
+# Pictures of app
+## 🙋‍♂️ Welcome Page 
+![welcome-page](https://imgur.com/SPfidIF.png)
+### Welcome Page -- each picture is a direct link.
+---
+## 🛰 Satellite tracker 🌎
+![satellite-tracker](https://imgur.com/bcegtlt.png)
+### Each dot represents 5 of 1500 Starlink Satellites 
+---
+## 📝 Application
+![application](https://imgur.com/5DX0M1A.png)
+---
+## 🧑‍🚀Applicants🚀
+![applicants](https://imgur.com/Dt6M6Yp.png)
+> our backend is also deployed on heroku at ```https://fakex-react.herokuapp.com/```
 > In order to see the full app please view our front end ```https://github.com/brandonhall96/react-project-3```
-> you will find additional information there concerning this app.
-   [React]: <https://https://reactjs.org//>
-   [node.js]: <http://nodejs.org>
