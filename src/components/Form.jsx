@@ -4,7 +4,7 @@ import setAuthToken from '../utils/setAuthToken'
 import { useState, useEffect } from "react";
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
-const CONNECTION_URI = process.env.DB_URI || {$process.env.REACT_APP_SERVER_URL};
+const CONNECTION_URI = process.env.DB_URI || process.env.REACT_APP_SERVER_URL;
 
 const Form = (props) => {
     const [name, setName] = useState('');
