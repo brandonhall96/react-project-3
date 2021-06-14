@@ -36,9 +36,9 @@ const [redirect, setRedirect] = useState(false)
     const allAstronauts = astronauts.map((astronaut, i) => {
         return <div key={i}>
             <h2>{astronaut.name}</h2>
-            <p>Age: {astronaut.age}</p>
-            <p>Favorite Space Movie: {astronaut.favSpaceMovie}</p>
-            <p>Favorite Astronaut: {astronaut.favAstronaut}</p>
+            <p><strong>Age:</strong> {astronaut.age}</p>
+            <p><strong>Favorite Space Movie:</strong> {astronaut.favSpaceMovie}</p>
+            <p><strong>Favorite Astronaut:</strong> {astronaut.favAstronaut}</p>
             <p><strong>Qualifications:</strong> {astronaut.question}</p>
             
                 <button type="button" class="btn btn-outline-danger">
