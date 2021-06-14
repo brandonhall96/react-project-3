@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Profile = (props) => {
     const { handleLogout } = props;
-    const { exp, id, name, email } = props.user;
+    const { exp, name, email } = props.user;
     const expirationTime = new Date(exp * 1000);
     let currentTime = Date.now();
     console.log(String(expirationTime));
@@ -17,7 +17,6 @@ const Profile = (props) => {
         <h1>Profile</h1>
         <p><strong>Name:</strong> { name }</p> 
         <p><strong>Email:</strong> { email }</p> 
-        {/* <p><strong>ID:</strong> { id }</p> */}
         <h5><strong>Click below to apply to be an astronaut</strong></h5>
     </div>) : <h4>Loading...</h4>
         
@@ -31,10 +30,6 @@ const Profile = (props) => {
     };
     
     return (
-
-        <div className='profile'>
-            { props.user ? userData : errorDiv() }
-
         <div className="row mt-4">
             <div className="col-md-8 offset-md-3">
                 <div className="card card-body">
@@ -49,7 +44,6 @@ const Profile = (props) => {
                 </div>
             </div>
 
-        </div>
         </div>
 
     );

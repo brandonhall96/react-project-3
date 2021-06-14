@@ -1,6 +1,6 @@
-# SPACEX PROJECT
+![Imgur](https://i.imgur.com/yq7noDD.png)
 
-## WHAT IT IS 
+# WHAT IT IS 
 
 
 ## HOW IT WORKS 

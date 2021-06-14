@@ -20,8 +20,9 @@ body {
     color: green;
 }
 
-.bio {
+#bio {
     color: white;
+    text-align: center;
     
 }
 
