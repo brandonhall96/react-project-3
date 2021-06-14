@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import axios from 'axios';
 import {Link, Redirect} from 'react-router-dom'
 
-const CONNECTION_URI = process.env.DB_URI || "http://localhost:8080";
+const CONNECTION_URI = process.env.DB_URI || process.env.REACT_APP_SERVER_URL;
 
 const Astronaut =  (props) =>{
 //
@@ -59,7 +59,7 @@ const [redirect, setRedirect] = useState(false)
         //update to .env 
         console.log(id)
         setAuthToken(localStorage.getItem("jwtToken"))
-        axios.delete(`http://localhost:8080/api/astros/${id}`)
+        axios.delete(`{$process.env.REACT_APP_SERVER_URL}/api/astros/${id}`)
         .then(response => {
             setRedirect(true)
             console.log(response.data)
