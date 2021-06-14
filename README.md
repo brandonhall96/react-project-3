@@ -1,9 +1,0 @@
-# SPACEX PROJECT
-
-## WHAT IT IS 
-
-
-## HOW IT WORKS 
-
-
-## STRETCH GOALS
