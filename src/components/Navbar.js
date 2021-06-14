@@ -29,7 +29,7 @@ const Navbar = (props) => {
                             <NavLink className="nav-link"  to="/rockets">Rockets</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link"  to="/astronauts">Astronauts</NavLink>
+                            <NavLink className="nav-link"  to="/astronauts">Astronaut Applicants</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link"  to="/dragons">Dragons</NavLink>
