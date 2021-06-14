@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
-const CONNECTION_URI = process.env.DB_URI || "http://localhost:8080";
+const CONNECTION_URI = process.env.DB_URI || process.env.REACT_APP_SERVER_URL;
 
 const UpdateForm = (props) => {
     const [name, setName] = useState('');
