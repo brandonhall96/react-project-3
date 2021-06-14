@@ -47,6 +47,11 @@ JWT_SECRET=""
 # WireFrame
 ![wireframe](https://imgur.com/9GN3TXS.png)
 > Above is the original wireframe that we used as reference to get us started.
+![](https://imgur.com/0QxxiZf.png)
+---
+![](https://imgur.com/P1SfUlC.png)
+---
+![](https://imgur.com/o7at6k3.png)
 ---
 # Code Snippets to be Proud of 
 ![code-App.js](https://imgur.com/IpXH2Xl.png)
