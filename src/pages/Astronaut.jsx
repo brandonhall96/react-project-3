@@ -1,4 +1,4 @@
-// import setAuthToken from '../utils/setAuthToken'
+//========================IMPORTS==================================//
 import Form from '../components/Form'
 import setAuthToken from '../utils/setAuthToken'    
 import { useState, useEffect } from "react";
@@ -8,7 +8,6 @@ import {Link, Redirect} from 'react-router-dom'
 const CONNECTION_URI = process.env.DB_URI || process.env.REACT_APP_SERVER_URL;
 
 const Astronaut =  (props) =>{
-//
 const [astronauts, setAstronauts] = useState([])
 const [redirect, setRedirect] = useState(false)
 
@@ -26,13 +25,13 @@ const [redirect, setRedirect] = useState(false)
 
     },[])
 
-
     useEffect(() => {
         console.log("here is astronauts in the 2nd useEffect")
         console.log(astronauts)
 
     },[astronauts])
 
+    //========================MAPPING, EDIT LINK, DELETE BUTTON==================================//
     const allAstronauts = astronauts.map((astronaut, i) => {
         return <div key={i}>
             <h2>{astronaut.name}</h2>
@@ -54,7 +53,7 @@ const [redirect, setRedirect] = useState(false)
         </div>
     })
    
-
+//========================DELETE FUNCTION==================================//
     const deleteAstro =  async (id) => {
         //update to .env 
         console.log(id)
@@ -67,6 +66,8 @@ const [redirect, setRedirect] = useState(false)
         
       };
       if (redirect) return <Redirect to="/astronauts" />
+      
+   //========================ASTRONAUTS DISPLAY==================================//   
     return (
 
         <div className="row mt-4">

@@ -42,11 +42,6 @@ const Dragons = (props) => {
             </div>
     })
 
-
-
-
-
-
     return(
     <div>
         <div className="rocket">
