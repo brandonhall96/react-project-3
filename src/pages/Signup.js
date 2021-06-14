@@ -39,7 +39,7 @@ const Signup = (props) => {
         if (password === confirmPassword && password.length >= 8) {
             const payload = {name, email, password}
 
-            let url = `${REACT_APP_SERVER_URL}api/users/signup`;
+            let url = `${REACT_APP_SERVER_URL}/api/users/signup`;
             axios.post(url, payload)
             .then (res => {
                 console.log(res.data);
