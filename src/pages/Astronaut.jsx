@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import axios from 'axios';
 import {Link, Redirect} from 'react-router-dom'
 
+
+const astrosHeader = "https://imgur.com/bUbFqAd.png" 
 const CONNECTION_URI = process.env.DB_URI || process.env.REACT_APP_SERVER_URL;
 
 const Astronaut =  (props) =>{
@@ -66,17 +68,20 @@ const [redirect, setRedirect] = useState(false)
         
       };
       if (redirect) return <Redirect to="/astronauts" />
-      
+
    //========================ASTRONAUTS DISPLAY==================================//   
     return (
-
+        <div>
+        {/* <img src={astrosHeader} /> */}
         <div className="row mt-4">
             <div className="col-md-8 offset-md-3">
+            
                 <div className="card card-body">
                 <div class="text-center">
                   {allAstronauts}
                 </div>
             </div>
+        </div>
         </div>
         </div>
     )

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 const Login = (props) => {
@@ -57,7 +57,8 @@ const Login = (props) => {
                             <label htmlFor="password">Password</label>
                             <input type="password" name="password" value={password} onChange={handlePassword} className="form-control" />
                         </div>
-                        <button type="submit" className="btn btn-primary float-right">Submit</button>
+                        <button type="submit" className="btn btn-primary float-right">LOGIN</button>
+                        <button class="btn btn-outline-primary"><Link to="/signup"/>No Account?</button>
                     </form>
                 </div>
             </div>
