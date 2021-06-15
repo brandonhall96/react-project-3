@@ -75,5 +75,16 @@ JWT_SECRET=""
 ---
 ## 🧑‍🚀Applicants🚀
 ![applicants](https://imgur.com/Dt6M6Yp.png)
-> our backend is also deployed on heroku at ```https://fakex-react.herokuapp.com/```
-> In order to see the full app please view our front end ```https://github.com/brandonhall96/react-project-3```
+---
+
+# Stretch goals🚀
+### 1. Have Tracker load up faster
+### 2. Make option to delete and update only available to the user on Astronauts page
+### 3. Teach Brandon how to say GitHub -- it's not Jithub, buddy. What... 
+### 4. Add all 1500 Starlink satellites to Tracker 
+
+--- 
+
+## In order to see the full app please view our front end ```https://github.com/brandonhall96/react-project-3```
+
+
