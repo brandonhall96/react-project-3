@@ -1,10 +1,9 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import fakexLogo from './fakeX1.png';
 
 const Navbar = (props) => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container">
                 <Link className="navbar-brand" to="/">FakeX</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="#navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
