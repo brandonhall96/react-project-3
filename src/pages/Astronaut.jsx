@@ -42,12 +42,12 @@ const [redirect, setRedirect] = useState(false)
             <p><strong>Favorite Astronaut:</strong> {astronaut.favAstronaut}</p>
             <p><strong>Qualifications:</strong> {astronaut.question}</p>
             
-                <button type="button" class="btn btn-outline-danger">
+                <button type="button" className="btn btn-outline-danger">
                     <Link className="edit"
                     to={`/edit/${astronaut._id}`}
                     >Edit</Link></button>
                     {' '}
-                <button type="button" class="btn btn-outline-danger"
+                <button type="button" className="btn btn-outline-danger"
                 onClick={() => deleteAstro(astronaut._id)}
                 >Delete</button>
                 <hr></hr>
@@ -60,15 +60,18 @@ const [redirect, setRedirect] = useState(false)
         //update to .env 
         console.log(id)
         setAuthToken(localStorage.getItem("jwtToken"))
-        axios.delete(`{$process.env.REACT_APP_SERVER_URL}/api/astros/${id}`)
+        axios.delete(`${process.env.REACT_APP_SERVER_URL}/api/astros/${id}`)
         .then(response => {
             setRedirect(true)
             console.log(response.data)
+
         })
+
         
       };
-      if (redirect) return <Redirect to="/astronauts" />
+      if (redirect) return <Redirect to="/profile" />
 
+      console.log(props)
    //========================ASTRONAUTS DISPLAY==================================//   
     return (
         <div>
@@ -77,7 +80,7 @@ const [redirect, setRedirect] = useState(false)
             <div className="col-md-8 offset-md-3">
             
                 <div className="card card-body">
-                <div class="text-center">
+                <div className="text-center">
                   {allAstronauts}
                 </div>
             </div>
