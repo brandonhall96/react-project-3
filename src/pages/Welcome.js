@@ -30,7 +30,7 @@ const Welcome = () => {
                 </button>
             </div>
             <br />     
-            <h1 id="bio" class="text-center"> Log in to learn about SpaceX's crew, rockets, and see real live feed from Starlink's Satellites. You can also apply to be an Astronaut in extremely selective program! </h1>
+            <h1 id="bio2" class="text-center"> Log in to learn about SpaceX's crew, rockets, and see real live feed from Starlink's Satellites. You can also apply to be an Astronaut in extremely selective program! </h1>
             </div>
     )
 }
